@@ -6,7 +6,8 @@
   "scripts": {
     "start": "ts-node src/index.ts",
     "cli": "ts-node src/cli/cli.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "apollo_server": "ts-node src/apolloServer/index.ts"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +23,9 @@
   },
   "dependencies": {
     "@ethersproject/providers": "^5.6.2",
+    "@graphql-tools/load-files": "^6.5.3",
+    "@graphql-tools/merge": "^8.2.7",
+    "apollo-server": "^3.6.7",
     "axios": "^0.26.1",
     "dotenv": "^16.0.0",
     "ethcall": "^4.4.0",

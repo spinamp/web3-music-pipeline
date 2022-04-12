@@ -1,0 +1,4 @@
+input ValueExistsWhere {
+    key: String!
+    valueExists: Boolean!
+}

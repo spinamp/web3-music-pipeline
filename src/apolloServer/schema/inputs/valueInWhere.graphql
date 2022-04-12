@@ -1,0 +1,4 @@
+input ValueInWhere {
+    key: String!
+    valueIn: [String!]!
+}

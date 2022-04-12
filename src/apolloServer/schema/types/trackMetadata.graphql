@@ -1,0 +1,6 @@
+type TrackMetadata {
+    description: String
+    mimeType: String
+    name: String
+    version: String
+}

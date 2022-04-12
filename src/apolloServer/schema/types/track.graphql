@@ -1,0 +1,9 @@
+type Track {
+    id : ID!
+    platform: String
+    createdAtBlockNumber: Int
+    tokenURI: String
+    tokenMetadataURI: String
+    metadataIPFSHash: String
+    metadata: TrackMetadata
+}

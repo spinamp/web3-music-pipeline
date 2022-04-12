@@ -1,0 +1,7 @@
+type Query {
+    tracks(
+        valueIsWhere: [ValueIsWhere], 
+        valueInWhere: [ValueInWhere],
+        valueExistsWhere: [ValueExistsWhere]
+    ): [Track]
+}

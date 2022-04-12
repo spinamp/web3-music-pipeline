@@ -1,0 +1,4 @@
+input ValueIsWhere {
+    key: String!
+    value: String!
+}
