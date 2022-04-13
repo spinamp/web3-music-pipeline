@@ -7,7 +7,7 @@
     "start": "ts-node src/index.ts",
     "cli": "ts-node src/cli/cli.ts",
     "build": "tsc",
-    "apollo_server": "ts-node src/apolloServer/index.ts"
+    "serve": "ts-node src/apolloServer/index.ts"
   },
   "author": "",
   "license": "ISC",
