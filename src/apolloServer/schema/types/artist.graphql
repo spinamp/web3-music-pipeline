@@ -1,0 +1,17 @@
+interface ArtistInterface {
+    id: ID!
+    name: String
+}
+
+type ArtistBasic implements ArtistInterface{
+    id: ID!
+    name: String
+}
+
+type Artist implements ArtistInterface{
+    id: ID!
+    name: String
+    slug: String
+    createdAtTimestamp: String
+    profiles: [Profile]
+}

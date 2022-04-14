@@ -4,4 +4,16 @@ type Query {
         valueInWhere: [ValueInWhere],
         valueExistsWhere: [ValueExistsWhere]
     ): [Track]
+
+    processedTracks(
+        valueIsWhere: [ValueIsWhere], 
+        valueInWhere: [ValueInWhere],
+        valueExistsWhere: [ValueExistsWhere]
+    ): [ProcessedTrack]
+    
+    artists(
+        valueIsWhere: [ValueIsWhere], 
+        valueInWhere: [ValueInWhere],
+        valueExistsWhere: [ValueExistsWhere]
+    ): [Artist]
 }

@@ -1,0 +1,14 @@
+type ProcessedTrack {
+    id: ID!
+    platformId: String
+    title: String
+    platform: String
+    lossyAudioIPFSHash: String
+    lossyAudioURL: String
+    createdAtTimestamp: String
+    lossyArtworkIPFSHash: String
+    lossyArtworkURL: String
+    websiteUrl: String
+    artistId: String
+    artist: ArtistBasic
+}

@@ -1,0 +1,9 @@
+type Profile {
+    name: String
+    artistId: String
+    platformId: String
+    platform: String
+    avatarUrl: String
+    websiteUrl: String
+    createdAtTimestamp: String
+}
