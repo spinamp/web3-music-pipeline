@@ -11,16 +11,17 @@ yarn save-db
 
 Drop the database:
 ```bash
-yarn connect-db-root
-```
-and then
-```sql
-drop database web3_music_pipeline;
+yarn drop-db
 ```
 
 Restore the database:
 ```bash
 yarn restore-db
+```
+
+Reset the db (both 2 above):
+```bash
+yarn reset-db
 ```
 
 ## SQL Queries
