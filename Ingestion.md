@@ -217,6 +217,11 @@ talk time:
   - websiteUrl: nft.external_url
 
 async:
+main proxy: 0x100b8361baa522d69df839f0089fa1728aaa1aa8
+code: 0xd65530a562c37c0b9cf97a49adef88097ad926a9
+main art contract: https://etherscan.io/address/0xb6dae651468e9593e4581705a09c10a76ac1e0c8
+preorder tx: https://etherscan.io/tx/0xc2f7ee082c2568d9540652558dbfc0f7c5b8748770fd47fe9958f153d554f47d
+redeem tx: https://etherscan.io/tx/0x1ffac9aa1d2df0ebd1a3419f5fecef448cfa475857b9fb492bd2ef7cd7243edf
  - basically each new master is minted with an nft with json metadata that links to all the layers and stems
  - everything should be doable just from on-chain+ipfs metadata
  - likely need a pinning and audio processing phase to ensure high quality api though
