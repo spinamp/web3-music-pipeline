@@ -19,7 +19,6 @@
     "knex": "source .env && npx knex --knexfile ./db/../src/db/knexfile.ts --connection postgresql://$POSTGRES_USERNAME:$POSTGRES_PASSWORD@$POSTGRES_HOST:5432/$POSTGRES_DATABASE"
   },
   "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@types/lodash": "^4.14.181",
