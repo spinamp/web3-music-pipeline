@@ -1,9 +1,9 @@
 import { AxiosResponse } from 'axios';
 import _ from 'lodash';
-import { extractBaseCIDFromHash } from '../../clients/ipfs';
 
+import { extractBaseCIDFromHash } from '../../clients/ipfs';
 import { Table } from '../../db/db';
-import { unpinnedTrackContent } from '../../triggers/ipfs';
+import { unpinnedTrackContent, unpinnedProcessedArtworks } from '../../triggers/ipfs';
 import { Clients, Processor } from '../../types/processor';
 import { rollPromises } from '../../utils/rollingPromises';
 
@@ -32,7 +32,7 @@ const processorFunction = async (cids: string[], clients: Clients) => {
   const existingBaseCids = existingPinResponses.map((p: any) => p.pin.cid);
   const newPins = baseCIDs.filter(cid => !existingBaseCids.includes(cid));
 
-  const pinsToInsert = existingPinResponses.reduce((accum:any, pinResponse: any) => {
+  const pinsToInsert = existingPinResponses.reduce((accum: any, pinResponse: any) => {
     const baseCID = pinResponse.pin.cid;
     const existingCIDs = baseCIDLookups[baseCID];
     existingCIDs.forEach(cid => {
@@ -93,6 +93,14 @@ export const ipfsAudioPinner: Processor = ({
 export const ipfsArtworkPinner: Processor = ({
   name: 'ipfsArtworkPinner',
   trigger: unpinnedTrackContent('lossyArtworkIPFSHash', 10), // 10 is the max on many pinning apis for querying if already pinned
+  processorFunction: processorFunction,
+  initialCursor: undefined
+});
+
+
+export const ipfsProcessedArtworksPinner: Processor = ({
+  name,
+  trigger: unpinnedProcessedArtworks(10), // 10 is the max on many pinning apis
   processorFunction: processorFunction,
   initialCursor: undefined
 });
